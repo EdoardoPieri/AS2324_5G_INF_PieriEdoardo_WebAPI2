@@ -9,7 +9,7 @@ namespace AS2324_5G_INF_PieriEdoardo_WebAPI2.Controllers
         [HttpGet("Celsius_To_Fahrenheit")]
         public JsonResult celsius_to_fahrenheit(float celsius)
         {
-            if(celsius > -273)
+            if(celsius >= -273)
             {
                 return Json(new { status = "OK", result = celsius * (1.8) + 32 , message = "temperatura calcolata correttamente"});
             } else
